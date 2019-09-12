@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/gwanyip/cc-webar/issues"
   },
-  "homepage": "https://github.com/gwanyip/cc-webar#readme"
+  "homepage": "https://github.com/gwanyip/cc-webar#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
 }
