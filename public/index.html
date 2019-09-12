@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>USDZ</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	test
+  <div>
+  	<img src="/src/header.jpg">
+  </div>
+  <!-- AR Quicklook -->
+  <!-- <a rel="ar" href="/usdz/socks.usdz">
+    <img src="/usdz/prod-img.jpg" alt="USDZ" />
+  </a> -->
+
+  <model-viewer src="/src/outfit.glb" ar camera-controls alt="AR Test" background-color="#222" ios-src="/src/socks.usdz" magic-leap unstable-webxr></model-viewer>
+  <div>
+  	<img src="/src/footer.jpg">
+  </div>
 </body>
+
+<!-- Import the component -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 </html>
