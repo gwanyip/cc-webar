@@ -4,25 +4,23 @@
 	<title>USDZ</title>
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- The following libraries and polyfills are recommended to maximize browser support -->
+	  <!-- The following libraries and polyfills are recommended to maximize browser support -->
 
-	<!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
-	<script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+  <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/webcomponents-loader.js"></script>
 
-	<!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
-	<script src="../node_modules/intersection-observer/intersection-observer.js"></script>
+  <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+  <script src="https://googlewebcomponents.github.io/model-viewer/node_modules/intersection-observer/intersection-observer.js"></script>
 
-	<!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
-	<script src="../node_modules/resize-observer-polyfill/dist/ResizeObserver.js"></script>
+  <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+  <script src="https://googlewebcomponents.github.io/model-viewer/node_modules/resize-observer-polyfill/dist/ResizeObserver.js"></script>
 
-	<!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
-	<script src="../node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script>
+  <!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
+  <!-- <script src="../node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script> -->
+  <script src="https://googlewebcomponents.github.io/model-viewer/node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script>
 
-	<!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-	<script src="../node_modules/focus-visible/dist/focus-visible.js" defer></script>
-
-	<!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
-	<!--<script src="../node_modules/@magicleap/prismatic/prismatic.min.js"></script>-->
+  <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+  <script src="https://googlewebcomponents.github.io/model-viewer/node_modules/focus-visible/dist/focus-visible.js" defer></script>
 
 </head>
 <body>
@@ -66,30 +64,14 @@
   </div>
 </body>
 
-<!-- Import the component -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
-<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-
-  <script type="text/javascript">
-
-  	// $(".outfit1").click(function(){
-  	// 	console.log('outfit1');
-  	// 	$(".outfit1-container").css("display","block");
-  	// 	$(".outfit2-container").css("display","none");
-  	// 	$(".img-container").css("display","none");
-  	// })
-
-  	// $(".outfit2").click(function(){
-  	// 	console.log('outfit2');
-  	// 	$(".outfit2-container").css("display","block");
-  	// 	$(".outfit1-container").css("display","none");
-  	// 	$(".img-container").css("display","none");
-  	// })
-
+  <!-- Documentation-specific dependencies: -->
+  <script type="module"
+      src="dependencies.js">
   </script>
+  <script nomodule
+      src="dependencies-legacy.js">
+  </script>
+
+  <script type="module" src="https://googlewebcomponents.github.io/model-viewer/dist/model-viewer.js"></script>
+  <script nomodule src="https://googlewebcomponents.github.io/model-viewer/dist/model-viewer-legacy.js"></script>
 </html>
