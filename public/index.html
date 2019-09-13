@@ -28,19 +28,19 @@
   <!-- The following libraries and polyfills are recommended to maximize browser support -->
 
   <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
-  <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/webcomponents-loader.js"></script>
 
   <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
-  <script src="../node_modules/intersection-observer/intersection-observer.js"></script>
+ <!--  <script src="../node_modules/intersection-observer/intersection-observer.js"></script> -->
 
   <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
-  <script src="../node_modules/resize-observer-polyfill/dist/ResizeObserver.js"></script>
+<!--   <script src="../node_modules/resize-observer-polyfill/dist/ResizeObserver.js"></script> -->
 
   <!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
-  <script src="../node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script>
+<!--   <script src="../node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script> -->
 
   <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-  <script src="../node_modules/focus-visible/dist/focus-visible.js" defer></script>
+<!--   <script src="../node_modules/focus-visible/dist/focus-visible.js" defer></script> -->
 
   <!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
   <!--<script src="../node_modules/@magicleap/prismatic/prismatic.min.js"></script>-->
@@ -58,11 +58,11 @@
           <h2 class="demo-title">Augmented Reality</h2>
           <h4>This demonstrates several augmented reality features, including unstable-webxr, magic-leap and ios-src.</h4>
         </div>
-        <!-- <example-snippet stamp-to="demo-container-1" highlight-as="html"> -->
-          <!-- <template> -->
+        <example-snippet stamp-to="demo-container-1" highlight-as="html">
+          <template>
 <model-viewer src="/src/Astronaut.glb" ar camera-controls alt="A 3D model of an astronaut" background-color="#222" ios-src="src/tee.usdz" magic-leap unstable-webxr></model-viewer>
-          <!-- </template> -->
-        <!-- </example-snippet> -->
+          </template>
+        </example-snippet> 
 
         <h3 style="margin-top: 40px; padding-bottom: 8px;" class="border-bottom">iOS, Magic Leap & WebXR</h3>
         <ul class="list-attribute">
@@ -103,12 +103,12 @@
   </div>
 
   <!-- Documentation-specific dependencies: -->
-  <!-- <script type="module"
-      src="./built/dependencies.js">
+  <script type="module"
+      src="dependencies.js">
   </script>
   <script nomodule
       src="./built/dependencies-legacy.js">
-  </script> -->
+  </script>
 
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
