@@ -37,7 +37,8 @@
 <!--   <script src="../node_modules/resize-observer-polyfill/dist/ResizeObserver.js"></script> -->
 
   <!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
-<!--   <script src="../node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script> -->
+  <!-- <script src="../node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script> -->
+  <script src="fullscreen.js"></script>
 
   <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
 <!--   <script src="../node_modules/focus-visible/dist/focus-visible.js" defer></script> -->
@@ -106,11 +107,11 @@
   <script type="module"
       src="dependencies.js">
   </script>
-  <script nomodule
+  <!-- <script nomodule
       src="./built/dependencies-legacy.js">
-  </script>
+  </script> -->
 
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+  <script type="module" src="https://googlewebcomponents.github.io/model-viewer/dist/model-viewer.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 
 </body>
