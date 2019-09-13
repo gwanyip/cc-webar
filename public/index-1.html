@@ -27,24 +27,75 @@
 </head>
 <body>
   <div>
-  	<img src="/src/header.jpg">
+  	<img style="width:100%;" src="/src/outfit-header.jpg">
   </div>
   <!-- AR Quicklook -->
   <!-- <a rel="ar" href="/usdz/socks.usdz">
     <img src="/usdz/prod-img.jpg" alt="USDZ" />
   </a> -->
-
-  <model-viewer
-  	style="width: 80%; height: 400px; margin: 0 auto;"
-  	src="/src/Astronaut.glb"
+ <div>
+ 	<div class="img-container">
+ 		<img style="width:100%;" src="src/outfit-prod-img.jpg">
+ 	</div>
+ 	<model-viewer
+ 		class="outfit1-container"
+  	style="display: none; width: 80%; height: 400px; margin: 0 auto;"
+  	src="/src/outfit_shirt_pant.glb"
   	ios-src="/src/socks.usdz" 
   	ar camera-controls alt="AR Test" background-color="#222" magic-leap unstable-webxr></model-viewer>
+
+	<model-viewer
+	  	class="outfit2-container"
+	  	style="display: none; width: 80%; height: 400px; margin: 0 auto;"
+	  	src="/src/outfit_shirt_sweater.glb"
+	  	ios-src="/src/socks.usdz" 
+	  	ar camera-controls alt="AR Test" background-color="#222" magic-leap unstable-webxr></model-viewer>
+ </div>
+ <div>
+ 	<img style="width:100%;" src="/src/subtitle.jpg">
+ 	<div style="display: flex; flex-flow: row; justify-content: center; align-items: center;">
+ 		<div style="width:50%;">
+ 			<a href="outfit1.html">
+ 				<img class="outfit1" style="width:100%;"src="src/outfit_shirt_pant.png">
+ 			</a>
+ 		</div> 		
+ 		<div style="width:50%;">
+ 			<a href="">
+ 				<img class="outfit2" style="width:100%;" src="src/outfit_shirt_sweater.png">
+ 			</a> 
+ 		</div> 				
+ 	</div>
+ </div>
+  
   <div>
-  	<img src="/src/footer.jpg">
+  	<img style="width:100%;" src="/src/outfit-footer.jpg">
   </div>
 </body>
 
 <!-- Import the component -->
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
 <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+
+  	// $(".outfit1").click(function(){
+  	// 	console.log('outfit1');
+  	// 	$(".outfit1-container").css("display","block");
+  	// 	$(".outfit2-container").css("display","none");
+  	// 	$(".img-container").css("display","none");
+  	// })
+
+  	// $(".outfit2").click(function(){
+  	// 	console.log('outfit2');
+  	// 	$(".outfit2-container").css("display","block");
+  	// 	$(".outfit1-container").css("display","none");
+  	// 	$(".img-container").css("display","none");
+  	// })
+
+  </script>
 </html>
