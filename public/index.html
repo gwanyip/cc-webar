@@ -1,118 +1,101 @@
-
-<!--
-/*
- * Copyright 2018 Google Inc. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the 'License');
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an 'AS IS' BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
--->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>&lt;model-viewer&gt; Augmented Reality</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no,
-  minimum-scale=1.0, maximum-scale=1.0">
-  <link type="text/css" href="styles/examples.css" rel="stylesheet" />
-  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+	<title>USDZ</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- The following libraries and polyfills are recommended to maximize browser support -->
+	<!-- The following libraries and polyfills are recommended to maximize browser support -->
 
-  <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/webcomponents-loader.js"></script>
+	<!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+	<script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
-  <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
-  <script src="https://googlewebcomponents.github.io/model-viewer/node_modules/intersection-observer/intersection-observer.js"></script>
+	<!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+	<script src="../node_modules/intersection-observer/intersection-observer.js"></script>
 
-  <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
-  <script src="https://googlewebcomponents.github.io/model-viewer/node_modules/resize-observer-polyfill/dist/ResizeObserver.js"></script>
+	<!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+	<script src="../node_modules/resize-observer-polyfill/dist/ResizeObserver.js"></script>
 
-  <!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
-  <!-- <script src="../node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script> -->
-  <script src="https://googlewebcomponents.github.io/model-viewer/node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script>
+	<!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
+	<script src="../node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script>
 
-  <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-  <script src="https://googlewebcomponents.github.io/model-viewer/node_modules/focus-visible/dist/focus-visible.js" defer></script>
+	<!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+	<script src="../node_modules/focus-visible/dist/focus-visible.js" defer></script>
 
-  <!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
-  <!--<script src="../node_modules/@magicleap/prismatic/prismatic.min.js"></script>-->
+	<!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
+	<!--<script src="../node_modules/@magicleap/prismatic/prismatic.min.js"></script>-->
 
 </head>
 <body>
-
-  <div class="sample">
-    <div id="demo-container-1" class="demo"></div>
-    <div class="content">
-      <div class="wrapper">
-
-        <a class="lockup" href="../index.html"><div class="icon-button icon-modelviewer-black"></div><h1>examples</h1></a>
-        <div class="heading">
-          <h2 class="demo-title">Augmented Reality</h2>
-          <h4>This demonstrates several augmented reality features, including unstable-webxr, magic-leap and ios-src.</h4>
-        </div>
-        <example-snippet stamp-to="demo-container-1" highlight-as="html">
-          <template>
-<model-viewer src="/src/Astronaut.glb" ar camera-controls alt="A 3D model of an astronaut" background-color="#222" ios-src="src/tee.usdz" unstable-webxr></model-viewer>
-          </template>
-        </example-snippet> 
-
-        <h3 style="margin-top: 40px; padding-bottom: 8px;" class="border-bottom">iOS, Magic Leap & WebXR</h3>
-        <ul class="list-attribute">
-          <li>
-            <div>ar</div>
-            <p>Enable the ability to launch
-            <a href="https://developers.google.com/ar/develop/java/scene-viewer">Scene Viewer</a>
-            on supported devices.</p>
-          </li>
-          <li>
-            <div>ios-src</div>
-            <p>Provides augmented reality on supported iOS 12+ devices via AR Quick Look, but requires an additional USDZ model.</p>
-          </li>
-          <li>
-            <div>magic-leap</div>
-            <p>Provides augmented reality on Magic Leap's Helio browser. Requires that the primary model be a GLB file, and the <a href="https://www.npmjs.com/package/@magicleap/prismatic">@magicleap/prismatic</a> library.</p>
-          </li>
-          <li>
-            <div>unstable-webxr</div>
-            <p>Provides augmented reality via the experimental <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>, implemented in Chrome Canary only behind flags. For more information see the <a href="https://codelabs.developers.google.com/codelabs/ar-with-webxr/#1">AR with WebXR Codelab</a>.</p>
-          </li>
-        </ul>
-
-      </div>
-    </div>
+  <div>
+  	<img style="width:100%;" src="/src/outfit-header.jpg">
   </div>
+  <!-- AR Quicklook -->
+  <!-- <a rel="ar" href="/usdz/socks.usdz">
+    <img src="/usdz/prod-img.jpg" alt="USDZ" />
+  </a> -->
+ <div>
+ 	<div class="img-container">
+ 		<img style="width:100%;" src="src/outfit-prod-img.jpg">
+ 	</div>
+ 	<model-viewer
+ 		class="outfit1-container"
+  	style="display: none; width: 80%; height: 400px; margin: 0 auto;"
+  	src="/src/outfit_shirt_pant.glb"
+  	ios-src="/src/socks.usdz" 
+  	ar camera-controls alt="AR Test" background-color="#222" magic-leap unstable-webxr></model-viewer>
 
-  <div class="footer">
-    <ul>
-      <li class="attribution">
-        <a href="https://poly.google.com/view/dLHpzNdygsg">Astronaut</a> by <a href="https://poly.google.com/user/4aEd8rQgKu2">Poly</a>,
-        licensed under <a href="https://creativecommons.org/licenses/by/2.0/">CC-BY</a>.
-      </li>
-    </ul>
-
-    <div style="margin-top:24px;" class="copyright">©Copyright 2018 Google Inc. Licensed under the Apache License 2.0.</div>
-    <div><a href="https://github.com/GoogleWebComponents/model-viewer">Github</a> ∙ <a href="https://model-viewer.glitch.me/">Glitch</a> ∙ <a href="https://github.com/GoogleWebComponents/model-viewer/issues">Bug report</a></div>
+	<model-viewer
+	  	class="outfit2-container"
+	  	style="display: none; width: 80%; height: 400px; margin: 0 auto;"
+	  	src="/src/outfit_shirt_sweater.glb"
+	  	ios-src="/src/socks.usdz" 
+	  	ar camera-controls alt="AR Test" background-color="#222" magic-leap unstable-webxr></model-viewer>
+ </div>
+ <div>
+ 	<img style="width:100%;" src="/src/subtitle.jpg">
+ 	<div style="display: flex; flex-flow: row; justify-content: center; align-items: center;">
+ 		<div style="width:50%;">
+ 			<a href="outfit1.html">
+ 				<img class="outfit1" style="width:100%;"src="src/outfit_shirt_pant.png">
+ 			</a>
+ 		</div> 		
+ 		<div style="width:50%;">
+ 			<a href="">
+ 				<img class="outfit2" style="width:100%;" src="src/outfit_shirt_sweater.png">
+ 			</a> 
+ 		</div> 				
+ 	</div>
+ </div>
+  
+  <div>
+  	<img style="width:100%;" src="/src/outfit-footer.jpg">
   </div>
-
-  <!-- Documentation-specific dependencies: -->
-  <script type="module"
-      src="dependencies.js">
-  </script>
-  <script nomodule
-      src="dependencies-legacy.js">
-  </script>
-
-  <script type="module" src="https://googlewebcomponents.github.io/model-viewer/dist/model-viewer.js"></script>
-  <script nomodule src="https://googlewebcomponents.github.io/model-viewer/dist/model-viewer-legacy.js"></script>
-
 </body>
+
+<!-- Import the component -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+
+  	// $(".outfit1").click(function(){
+  	// 	console.log('outfit1');
+  	// 	$(".outfit1-container").css("display","block");
+  	// 	$(".outfit2-container").css("display","none");
+  	// 	$(".img-container").css("display","none");
+  	// })
+
+  	// $(".outfit2").click(function(){
+  	// 	console.log('outfit2');
+  	// 	$(".outfit2-container").css("display","block");
+  	// 	$(".outfit1-container").css("display","none");
+  	// 	$(".img-container").css("display","none");
+  	// })
+
+  </script>
 </html>
