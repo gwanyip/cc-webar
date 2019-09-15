@@ -4,22 +4,23 @@
 	<title>USDZ</title>
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- The following libraries and polyfills are recommended to maximize browser support -->
-
   <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
-  <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
 
-  <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
-  <script src="/node_modules/intersection-observer/intersection-observer.js"></script>
+    <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
 
-  <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
-  <script src="/node_modules/resize-observer/dist/resize-observer.js"></script>
+    <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+    <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
 
-  <!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
-  <script src="/node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script>
+    <!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
+    <script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
 
-  <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-  <script src="/node_modules/focus-visible/dist/focus-visible.js" defer></script>
+    <!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
+    <script src="https://unpkg.com/@magicleap/prismatic/prismatic.min.js"></script>
+    
+    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
 
 </head>
 <body>
@@ -34,12 +35,23 @@
 <!--  	<div class="img-container">
  		<img style="width:100%;" src="src/outfit-prod-img.jpg">
  	</div> -->
- 	<model-viewer
+ 	<!-- <model-viewer
  		class="outfit1-container"
   	style="width: 80%; height: 400px; margin: 0 auto;"
   	src="/src/outfit_shirt_pant.glb"
   	ios-src="/src/socks.usdz" 
-  	ar camera-controls alt="AR Test" background-color="#222" magic-leap unstable-webxr></model-viewer>
+  	ar camera-controls alt="AR Test" background-color="#222" magic-leap unstable-webxr></model-viewer> -->
+
+
+    <model-viewer src="/src/outfit_shirt_pant.glb"
+                  alt="A 3D model of an astronaut"
+                  background-color="#70BCD1"
+                  shadow-intensity="1"
+                  camera-controls
+                  interaction-prompt="auto"
+                  auto-rotate ar magic-leap>
+    </model-viewer>
+    
  </div>
  <div>
   <img style="width:100%;" src="/src/subtitle.jpg">
@@ -62,14 +74,16 @@
   </div>
 </body>
 
-  <!-- Documentation-specific dependencies: -->
+    <!-- 💁 Include both scripts below to support all browsers! -->
+
+  <!-- Loads <model-viewer> for modern browsers: -->
   <script type="module"
-      src="dependencies.js">
-  </script>
-  <script nomodule
-      src="dependencies-legacy.js">
+      src="https://unpkg.com/@google/model-viewer@v0.6.0/dist/model-viewer.js">
   </script>
 
- <script type="module" src="/node_modules/@google/model-viewer/dist/model-viewer.js"></script>
-<script nomodule src="/node_modules/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule
+      src="https://unpkg.com/@google/model-viewer@v0.6.0/dist/model-viewer-legacy.js">
+  </script>
+
 </html>
