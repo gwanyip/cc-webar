@@ -7,22 +7,22 @@
 	<!-- The following libraries and polyfills are recommended to maximize browser support -->
 
 	<!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
-	<script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+	<script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
 	<!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
-	<script src="../node_modules/intersection-observer/intersection-observer.js"></script>
+	<script src="/node_modules/intersection-observer/intersection-observer.js"></script>
 
 	<!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
-	<script src="../node_modules/resize-observer-polyfill/dist/ResizeObserver.js"></script>
+	<script src="/node_modules/resize-observer/dist/resize-observer.js"></script>
 
 	<!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
-	<script src="../node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script>
+	<script src="/node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script>
 
 	<!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-	<script src="../node_modules/focus-visible/dist/focus-visible.js" defer></script>
+	<script src="/node_modules/focus-visible/dist/focus-visible.js" defer></script>
 
 	<!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
-	<!--<script src="../node_modules/@magicleap/prismatic/prismatic.min.js"></script>-->
+	<!--<script src="/node_modules/@magicleap/prismatic/prismatic.min.js"></script>-->
 
 </head>
 <body>
@@ -37,7 +37,7 @@
  	<div class="img-container">
  		<img style="width:100%;" src="src/outfit-prod-img.jpg">
  	</div>
- 	<model-viewer
+ 	<!-- <model-viewer
  		class="outfit1-container"
   	style="display: none; width: 80%; height: 400px; margin: 0 auto;"
   	src="/src/outfit_shirt_pant.glb"
@@ -49,7 +49,7 @@
 	  	style="display: none; width: 80%; height: 400px; margin: 0 auto;"
 	  	src="/src/outfit_shirt_sweater.glb"
 	  	ios-src="/src/socks.usdz" 
-	  	ar camera-controls alt="AR Test" background-color="#222" magic-leap unstable-webxr></model-viewer>
+	  	ar camera-controls alt="AR Test" background-color="#222" magic-leap unstable-webxr></model-viewer> -->
  </div>
  <div>
  	<img style="width:100%;" src="/src/subtitle.jpg">
@@ -73,7 +73,7 @@
 </body>
 
 <!-- Import the component -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
-<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+<script type="module" src="/node_modules/@google/model-viewer/dist/model-viewer.js"></script>
+<script nomodule src="/node_modules/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 
 </html>
